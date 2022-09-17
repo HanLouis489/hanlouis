@@ -1,0 +1,34 @@
+public class Mietpreisrechner{
+
+public static void main(String[] args){
+    double a = 0;      //Kosten
+    double k = 250;    //Kilometer
+    double i = 5;      //Tage
+    Mietkosten(a,k,i);
+}
+
+public static void Mietkosten(double a, double k ,double i){
+    if(i>0){                                //Mietdauer von mindestens einem Tag
+        if(i<14){                           //Mietdauer weniger als 14 Tage
+            a+=20*i;                        //  +20Euro pro Tag
+            System.out.println(a);
+            if(k<=200){                     //weniger als 200km 
+                a+=40;                      //  Pauschale von +40 Euro
+                System.out.println(a);
+            }
+            else{                           //mehr als 200km
+                a+=40+((k-200)*0.15);       //  Pauschale von +40 Euro und +0.15 Euro fur jeden km uber 200km 
+                System.out.println(a);
+            }
+        }
+        else(i>13){                         //Mietdauer mehr als 13 Tage
+            a+=300+(k*0.12);                //  Pauschale von +300 und +0.12 Euro fur jeden km
+            System.out.println(a);
+        }
+    }
+    if(i<0){                                //Mietdauer von keinem Tag
+    System.out.println("Somethings wrong I can feel it...");
+    }
+    System.out.println(a);                  //End-Ergebnis
+}
+}
