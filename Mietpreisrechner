@@ -32,4 +32,4 @@ public static void Mietkosten(int a, int k ,int i){
     System.out.println(a);                  //End-Ergebnis
 }
 }
-//42..
+//42
